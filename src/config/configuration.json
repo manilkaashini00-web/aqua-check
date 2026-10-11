@@ -199,12 +199,7 @@
       "approved_upper_bound": 0.035,
       "treatment_if_measure_below_lower_bound": "A negative reported value is invalid for this assessment. Review blanks, calibration, calculations and reporting with the laboratory; obtain a valid result before assessment.",
       "treatment_if_measure_above_upper_bound": "Evaluate silver recovery, precipitation or selective ion exchange according to chemical form and complexing agents. Manage recovered silver and spent media appropriately.",
-      "recommended_treatment_technology": "Precipitation, selective ion exchange",
-      "literature_from_source_matrix": [
-        "Fu & Wang (2011)"
-      ],
-      "limit_source": "CEA Gazette No. 2264/17 (2022), Schedule I, List IIIA",
-      "lower_bound_type": "input_validation_minimum"
+      
     },
     {
       "name": "selenium_total",
@@ -215,13 +210,8 @@
       "approved_lower_bound": 0,
       "approved_upper_bound": 0.05,
       "treatment_if_measure_below_lower_bound": "A negative reported value is invalid for this assessment. Review blanks, calibration, calculations and reporting with the laboratory; obtain a valid result before assessment.",
-      "treatment_if_measure_above_upper_bound": "Determine selenium speciation. Evaluate suitable adsorption or reduction-based treatment through testing, since selenite and selenate behave differently.",
-      "recommended_treatment_technology": "Adsorption, reduction–precipitation",
-      "literature_from_source_matrix": [
-        "Fu & Wang (2011)"
-      ],
-      "limit_source": "CEA Gazette No. 2264/17 (2022), Schedule I, List IIIA",
-      "lower_bound_type": "input_validation_minimum"
+      "treatment_if_measure_above_upper_bound": "Determine selenium speciation. Evaluate suitable adsorption or reduction-based treatment through testing, since selenite and selenate behave differently."
+     
     },
     {
       "name": "dissolved_phosphate_as_p",
