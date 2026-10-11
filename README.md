@@ -20,7 +20,7 @@ npm run lint
 
 ## Deployment (GitHub Pages)
 
-The live site is **https://supundhananjaya.github.io/aqua-check/**.
+The live site is **https://manilkaashini00-web.github.io/aqua-check/**.
 
 `.github/workflows/deploy.yml` lints, tests, builds and publishes on every push to `main`, so a
 redeploy is just a merge. It can also be run by hand from the **Actions** tab
