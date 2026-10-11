@@ -7,51 +7,51 @@
       "label": "pH",
       "description": "Acidity or alkalinity of the sample.",
       "unit": "pH",
-      "required": true,
+      "required": false,
       "approved_lower_bound": 6,
-      "approved_upper_bound": 9,
-      "treatment_if_measure_below_lower_bound": "Dose alkali into the neutralisation tank (hydrated lime or 20% caustic soda), confirm the mixer is running and the pH probe is calibrated, then retest after one full detention time. Trace the acid load upstream - usually an unbuffered acid dump or an over-dosed alum/ferric coagulant.",
-      "treatment_if_measure_above_upper_bound": "Dose dilute sulphuric acid or sparge CO2 into the neutralisation tank and retest after one full detention time. Check for caustic carry-over from a clean-in-place cycle or over-liming at the coagulation stage."
+      "approved_upper_bound": 8.5,
+      "treatment_if_measure_below_lower_bound": "Confirm the pH measurement and assess controlled alkali neutralisation using titration and compatibility testing; retest after treatment.",
+      "treatment_if_measure_above_upper_bound": "Confirm the pH measurement and assess controlled acid neutralisation using titration and compatibility testing; retest after treatment. Do not acidify cyanide- or sulphide-bearing waste."
     },
     {
       "name": "bod5",
       "label": "BOD5",
       "description": "Biochemical oxygen demand over a 5-day incubation.",
       "unit": "mg/L",
-      "required": true,
+      "required": false,
       "approved_lower_bound": 0,
       "approved_upper_bound": 30,
       "treatment_if_measure_below_lower_bound": "A negative BOD5 is not physically possible. Discard the result, re-check the dilution and the seeded blank, and repeat the 5-day incubation.",
-      "treatment_if_measure_above_upper_bound": "Organic load is breaking through the biological stage. Increase aeration and sludge retention time, check MLSS and the F/M ratio, raise the return activated sludge rate, and look for a shock or hydraulic load upstream. If the overload is routine, add an equalisation buffer or a polishing stage."
+      "treatment_if_measure_above_upper_bound": "Assess biodegradability and biological inhibition before selecting an MBBR, SBR or activated-sludge process. Segregate toxic chemical waste and evaluate equalisation. For an existing biological plant, investigate dissolved oxygen, biomass condition and loading before changing operating settings."
     },
     {
       "name": "cod",
       "label": "COD",
-      "description": "Chemical oxygen demand, including matter the biology cannot digest.",
+      "description": "Chemical oxygen demand, including matter that the biology cannot digest.",
       "unit": "mg/L",
-      "required": true,
+      "required": false,
       "approved_lower_bound": 0,
       "approved_upper_bound": 250,
       "treatment_if_measure_below_lower_bound": "A negative COD is not physically possible. Re-run the digestion with a fresh blank and verify the potassium dichromate standard.",
-      "treatment_if_measure_above_upper_bound": "Add chemical treatment ahead of the biological stage: dose a coagulant (ferric chloride or alum) with polymer and clarify. For refractory COD that survives the biology, polish with activated carbon or an ozone/Fenton step. Check upstream for a solvent, dye or oil discharge."
+      "treatment_if_measure_above_upper_bound": "Determine whether the COD is biodegradable or refractory. Evaluate biological treatment for biodegradable material and activated carbon or advanced oxidation for suitable refractory compounds. Validate removal and oxidation by-products through treatability testing."
     },
     {
       "name": "tss",
       "label": "Total suspended solids",
       "description": "Dry weight of particles retained by the filter.",
       "unit": "mg/L",
-      "required": true,
+      "required": false,
       "approved_lower_bound": 0,
-      "approved_upper_bound": 30,
+      "approved_upper_bound": 50,
       "treatment_if_measure_below_lower_bound": "A negative solids result is not physically possible. Re-dry and re-weigh the filter, and check the balance against a known mass.",
-      "treatment_if_measure_above_upper_bound": "Solids are carrying over the clarifier. Check the sludge blanket level and desludge, re-set the coagulant and polymer dose by jar test, reduce the surface overflow rate, and inspect the weirs and launders for short-circuiting. Add sand or cloth filtration as a final barrier."
+      "treatment_if_measure_above_upper_bound": "Evaluate settling and filtration; use coagulation and flocculation where fine particles do not settle adequately. Select coagulant and dose through jar tests and provide sludge collection."
     },
     {
       "name": "dissolved_oxygen",
       "label": "Dissolved oxygen",
       "description": "Free oxygen available in the sample.",
       "unit": "mg/L",
-      "required": true,
+      "required": false,
       "approved_lower_bound": 4,
       "approved_upper_bound": 8,
       "treatment_if_measure_below_lower_bound": "Increase blower output or diffuser coverage in the aeration basin and clean or replace fouled diffusers. Reduce the organic load reaching the basin. Low dissolved oxygen drives filamentous bulking, so check the sludge volume index once oxygen recovers.",
@@ -67,6 +67,295 @@
       "approved_upper_bound": 10,
       "treatment_if_measure_below_lower_bound": "A negative extractable result is not physically possible. Re-extract the sample with fresh solvent and re-weigh the dried flask.",
       "treatment_if_measure_above_upper_bound": "Skim the grease trap and the dissolved air flotation unit and shorten the skimming interval. Verify the DAF air-to-solids ratio and coagulant dose, and fit an upstream oil-water separator if the load is continuous. Never route skimmings back to the head of works."
+    },
+  {
+      "name": "tds",
+      "label": "TDS",
+      "description": "TDS in the wastewater sample; use the stated reporting basis.",
+      "unit": "mg/L",
+      "required": false,
+      "approved_lower_bound": 0,
+      "approved_upper_bound": 1000.0,
+      "treatment_if_measure_below_lower_bound": "A negative reported value is invalid for this assessment. Review blanks, calibration, calculations, and reporting with the laboratory; obtain a valid result before assessment.",
+      "treatment_if_measure_above_upper_bound": "Identify the dissolved ions and segregate concentrated salt waste. Evaluate reverse osmosis or electrodialysis with suitable pretreatment and a disposal route for the concentrate."
+    },
+{
+      "name": "arsenic_total",
+      "label": "Arsenic (As)",
+      "description": "Arsenic (As) in the wastewater sample; use the stated reporting basis.",
+      "unit": "mg/L",
+      "required": false,
+      "approved_lower_bound": 0,
+      "approved_upper_bound": 0.05,
+      "treatment_if_measure_below_lower_bound": "A negative reported value is invalid for this assessment. Review blanks, calibration, calculations and reporting with the laboratory; obtain a valid result before assessment.",
+      "treatment_if_measure_above_upper_bound": "Determine arsenic speciation. Evaluate iron-based adsorption or coagulation and filtration; evaluate conversion of As(III) where required. Manage arsenic-bearing media and sludge appropriately."
+         },
+    {
+      "name": "cadmium_total",
+      "label": "Cadmium (Cd)",
+      "description": "Cadmium (Cd) in the wastewater sample; use the stated reporting basis.",
+      "unit": "mg/L",
+      "required": false,
+      "approved_lower_bound": 0,
+      "approved_upper_bound": 0.03,
+      "treatment_if_measure_below_lower_bound": "A negative reported value is invalid for this assessment. Review blanks, calibration, calculations and reporting with the laboratory; obtain a valid result before assessment.",
+      "treatment_if_measure_above_upper_bound": "Evaluate chemical precipitation with solid separation, followed by selective ion exchange or adsorption if polishing is required. Check metal speciation and complexing agents, determine operating conditions through treatability tests, and manage metal-bearing sludge and spent media appropriately."    
+   },
+    {
+      "name": "chromium_total",
+      "label": "Total chromium (Cr)",
+      "description": "Total chromium (Cr) in the wastewater sample; use the stated reporting basis.",
+      "unit": "mg/L",
+      "required": false,
+      "approved_lower_bound": 0,
+      "approved_upper_bound": 0.05,
+      "treatment_if_measure_below_lower_bound": "A negative reported value is invalid for this assessment. Review blanks, calibration, calculations, and reporting with the laboratory; obtain a valid result before assessment.",
+      "treatment_if_measure_above_upper_bound": "Measure hexavalent chromium separately; total chromium alone does not establish speciation. Evaluate reduction where Cr(VI) is present, followed by precipitation and filtration, with polishing if needed."
+         },
+    {
+      "name": "chromium_hexavalent",
+      "label": "Hexavalent chromium (Cr⁶⁺)",
+      "description": "Hexavalent chromium (Cr⁶⁺) in the wastewater sample; use the stated reporting basis.",
+      "unit": "mg/L",
+      "required": false,
+      "approved_lower_bound": 0,
+      "approved_upper_bound": 0.01,
+      "treatment_if_measure_below_lower_bound": "A negative reported value is invalid for this assessment. Review blanks, calibration, calculations and reporting with the laboratory; obtain a valid result before assessment.",
+      "treatment_if_measure_above_upper_bound": "Use a separate validated Cr(VI) measurement. Evaluate controlled chemical reduction to Cr(III), followed by precipitation and solid separation. Verify both total chromium and Cr(VI) after treatment."
+    },
+    {
+      "name": "copper_total",
+      "label": "Copper (Cu)",
+      "description": "Copper (Cu) in the wastewater sample; use the stated reporting basis.",
+      "unit": "mg/L",
+      "required": false,
+      "approved_lower_bound": 0,
+      "approved_upper_bound": 0.05,
+      "treatment_if_measure_below_lower_bound": "A negative reported value is invalid for this assessment. Review blanks, calibration, calculations and reporting with the laboratory; obtain a valid result before assessment.",
+      "treatment_if_measure_above_upper_bound": "Evaluate chemical precipitation with solid separation, followed by selective ion exchange or adsorption if polishing is required. Check metal speciation and complexing agents, determine operating conditions through treatability tests, and manage metal-bearing sludge and spent media appropriately."
+    },
+    {
+      "name": "iron_total",
+      "label": "Iron (Fe)",
+      "description": "Iron (Fe) in the wastewater sample; use the stated reporting basis.",
+      "unit": "mg/L",
+      "required": false,
+      "approved_lower_bound": 0,
+      "approved_upper_bound": 3.0,
+      "treatment_if_measure_below_lower_bound": "A negative reported value is invalid for this assessment. Review blanks, calibration, calculations and reporting with the laboratory; obtain a valid result before assessment.",
+      "treatment_if_measure_above_upper_bound": "Determine dissolved and particulate iron. Evaluate oxidation of dissolved Fe(II) where needed, followed by precipitation and filtration; monitor final pH."    
+    },
+{
+      "name": "lead_total",
+      "label": "Lead (Pb)",
+      "description": "Lead (Pb) in the wastewater sample; use the stated reporting basis.",
+      "unit": "mg/L",
+      "required": false,
+      "approved_lower_bound": 0,
+      "approved_upper_bound": 0.05,
+      "treatment_if_measure_below_lower_bound": "A negative reported value is invalid for this assessment. Review blanks, calibration, calculations and reporting with the laboratory; obtain a valid result before assessment.",
+      "treatment_if_measure_above_upper_bound": "Evaluate chemical precipitation with solid separation, followed by selective ion exchange or adsorption if polishing is required. Check metal speciation and complexing agents, determine operating conditions through treatability tests, and manage metal-bearing sludge and spent media appropriately."
+          },
+    {
+      "name": "mercury_total",
+      "label": "Mercury (Hg)",
+      "description": "Mercury (Hg) in the wastewater sample; use the stated reporting basis.",
+      "unit": "mg/L",
+      "required": false,
+      "approved_lower_bound": 0,
+      "approved_upper_bound": 0.001,
+      "treatment_if_measure_below_lower_bound": "A negative reported value is invalid for this assessment. Review blanks, calibration, calculations, and reporting with the laboratory; obtain a valid result before assessment.",
+      "treatment_if_measure_above_upper_bound": "Segregate mercury-bearing laboratory waste. Evaluate mercury-selective sorbents or specialist precipitation through treatability testing and arrange authorized disposal of mercury-bearing residues."    
+},
+    {
+      "name": "nickel_total",
+      "label": "Nickel (Ni)",
+      "description": "Nickel (Ni) in the wastewater sample; use the stated reporting basis.",
+      "unit": "mg/L",
+      "required": false,
+      "approved_lower_bound": 0,
+      "approved_upper_bound": 0.2,
+      "treatment_if_measure_below_lower_bound": "A negative reported value is invalid for this assessment. Review blanks, calibration, calculations and reporting with the laboratory; obtain a valid result before assessment.",
+      "treatment_if_measure_above_upper_bound": "Evaluate chemical precipitation with solid separation, followed by selective ion exchange or adsorption if polishing is required. Check metal speciation and complexing agents, determine operating conditions through treatability tests, and manage metal-bearing sludge and spent media appropriately."    
+},
+    {
+      "name": "zinc_total",
+      "label": "Zinc (Zn)",
+      "description": "Zinc (Zn) in the wastewater sample; use the stated reporting basis.",
+      "unit": "mg/L",
+      "required": false,
+      "approved_lower_bound": 0,
+      "approved_upper_bound": 2.0,
+      "treatment_if_measure_below_lower_bound": "A negative reported value is invalid for this assessment. Review blanks, calibration, calculations and reporting with the laboratory; obtain a valid result before assessment.",
+      "treatment_if_measure_above_upper_bound": "Evaluate chemical precipitation with solid separation, followed by selective ion exchange or adsorption if polishing is required. Check metal speciation and complexing agents, determine operating conditions through treatability tests, and manage metal-bearing sludge and spent media appropriately."
+  {
+      "name": "silver_total",
+      "label": "Silver (Ag)",
+      "description": "Silver (Ag) in the wastewater sample; use the stated reporting basis.",
+      "unit": "mg/L",
+      "required": true,
+      "approved_lower_bound": 0,
+      "approved_upper_bound": 0.035,
+      "treatment_if_measure_below_lower_bound": "A negative reported value is invalid for this assessment. Review blanks, calibration, calculations and reporting with the laboratory; obtain a valid result before assessment.",
+      "treatment_if_measure_above_upper_bound": "Evaluate silver recovery, precipitation or selective ion exchange according to chemical form and complexing agents. Manage recovered silver and spent media appropriately.",
+      "recommended_treatment_technology": "Precipitation, selective ion exchange",
+      "literature_from_source_matrix": [
+        "Fu & Wang (2011)"
+      ],
+      "limit_source": "CEA Gazette No. 2264/17 (2022), Schedule I, List IIIA",
+      "lower_bound_type": "input_validation_minimum"
+    },
+    {
+      "name": "selenium_total",
+      "label": "Selenium (Se)",
+      "description": "Selenium (Se) in the wastewater sample; use the stated reporting basis.",
+      "unit": "mg/L",
+      "required": true,
+      "approved_lower_bound": 0,
+      "approved_upper_bound": 0.05,
+      "treatment_if_measure_below_lower_bound": "A negative reported value is invalid for this assessment. Review blanks, calibration, calculations and reporting with the laboratory; obtain a valid result before assessment.",
+      "treatment_if_measure_above_upper_bound": "Determine selenium speciation. Evaluate suitable adsorption or reduction-based treatment through testing, since selenite and selenate behave differently.",
+      "recommended_treatment_technology": "Adsorption, reduction–precipitation",
+      "literature_from_source_matrix": [
+        "Fu & Wang (2011)"
+      ],
+      "limit_source": "CEA Gazette No. 2264/17 (2022), Schedule I, List IIIA",
+      "lower_bound_type": "input_validation_minimum"
+    },
+    {
+      "name": "dissolved_phosphate_as_p",
+      "label": "Dissolved phosphate (as P)",
+      "description": "Dissolved phosphate (as P) in the wastewater sample; use the stated reporting basis.",
+      "unit": "mg/L",
+      "required": true,
+      "approved_lower_bound": 0,
+      "approved_upper_bound": 5.0,
+      "treatment_if_measure_below_lower_bound": "A negative reported value is invalid for this assessment. Review blanks, calibration, calculations and reporting with the laboratory; obtain a valid result before assessment.",
+      "treatment_if_measure_above_upper_bound": "Evaluate alum or ferric precipitation with flocculation and solid separation. Determine dose by jar testing, check alkalinity and final pH, and manage phosphorus-bearing sludge.",
+      "recommended_treatment_technology": "Alum or ferric chloride precipitation",
+      "literature_from_source_matrix": [
+        "Yeoman et al. (1988)"
+      ],
+      "limit_source": "CEA Gazette No. 2264/17 (2022), Schedule I, List IIIA",
+      "lower_bound_type": "input_validation_minimum"
+    },
+    {
+      "name": "tkn_as_n",
+      "label": "Total Kjeldahl nitrogen (as N)",
+      "description": "Total Kjeldahl nitrogen (as N) in the wastewater sample; use the stated reporting basis.",
+      "unit": "mg/L",
+      "required": true,
+      "approved_lower_bound": 0,
+      "approved_upper_bound": 150.0,
+      "treatment_if_measure_below_lower_bound": "A negative reported value is invalid for this assessment. Review blanks, calibration, calculations and reporting with the laboratory; obtain a valid result before assessment.",
+      "treatment_if_measure_above_upper_bound": "Measure ammonia and organic nitrogen separately. Evaluate ammonification and nitrification followed by nitrogen removal where needed. Nitrification alone converts nitrogen to nitrate rather than removing total nitrogen.",
+      "recommended_treatment_technology": "Biological nitrogen removal",
+      "literature_from_source_matrix": [
+        "Metcalf & Eddy (2014)"
+      ],
+      "limit_source": "CEA Gazette No. 2264/17 (2022), Schedule I, List IIIA",
+      "lower_bound_type": "input_validation_minimum"
+    },
+    {
+      "name": "ammoniacal_nitrogen_as_n",
+      "label": "Ammoniacal nitrogen (as N)",
+      "description": "Ammoniacal nitrogen (as N) in the wastewater sample; use the stated reporting basis.",
+      "unit": "mg/L",
+      "required": true,
+      "approved_lower_bound": 0,
+      "approved_upper_bound": 50.0,
+      "treatment_if_measure_below_lower_bound": "A negative reported value is invalid for this assessment. Review blanks, calibration, calculations and reporting with the laboratory; obtain a valid result before assessment.",
+      "treatment_if_measure_above_upper_bound": "Evaluate zeolite ion exchange for suitable low-flow streams or biological nitrification after checking toxicity, alkalinity and aeration requirements. Measure nitrate formed during nitrification and evaluate further removal where needed.",
+      "recommended_treatment_technology": "Zeolite ion exchange, nitrification",
+      "literature_from_source_matrix": [
+        "Hedström (2001)"
+      ],
+      "limit_source": "CEA Gazette No. 2264/17 (2022), Schedule I, List IIIA",
+      "lower_bound_type": "input_validation_minimum"
+    },
+    {
+      "name": "nitrate_as_n",
+      "label": "Nitrate (as N)",
+      "description": "Nitrate (as N) in the wastewater sample; use the stated reporting basis.",
+      "unit": "mg/L",
+      "required": true,
+      "approved_lower_bound": 0,
+      "approved_upper_bound": 10.0,
+      "treatment_if_measure_below_lower_bound": "A negative reported value is invalid for this assessment. Review blanks, calibration, calculations and reporting with the laboratory; obtain a valid result before assessment.",
+      "treatment_if_measure_above_upper_bound": "Evaluate anoxic biological denitrification or nitrate-selective ion exchange. Check carbon availability for biological treatment and arrange management of spent regenerant where ion exchange is used.",
+      "recommended_treatment_technology": "Biological denitrification, ion exchange",
+      "literature_from_source_matrix": [
+        "Kapoor & Viraraghavan (1997)"
+      ],
+      "limit_source": "CEA Gazette No. 2264/17 (2022), Schedule I, List IIIA",
+      "lower_bound_type": "input_validation_minimum"
+    },
+    {
+      "name": "cyanide_as_cn",
+      "label": "Cyanide (as CN)",
+      "description": "Cyanide (as CN) in the wastewater sample; use the stated reporting basis.",
+      "unit": "mg/L",
+      "required": true,
+      "approved_lower_bound": 0,
+      "approved_upper_bound": 0.05,
+      "treatment_if_measure_below_lower_bound": "A negative reported value is invalid for this assessment. Review blanks, calibration, calculations and reporting with the laboratory; obtain a valid result before assessment.",
+      "treatment_if_measure_above_upper_bound": "Segregate cyanide-bearing waste and refer treatment to a competent specialist. Evaluate controlled alkaline oxidation for the identified cyanide species; do not acidify cyanide waste. Confirm destruction and check by-products before discharge."
+    },
+    {
+      "name": "total_residual_chlorine_as_cl2",
+      "label": "Residual chlorine (as Cl₂)",
+      "description": "Residual chlorine (as Cl₂) in the wastewater sample; use the stated reporting basis.",
+      "unit": "mg/L",
+      "required": true,
+      "approved_lower_bound": 0,
+      "approved_upper_bound": 0.5,
+      "treatment_if_measure_below_lower_bound": "A negative reported value is invalid for this assessment. Review blanks, calibration, calculations and reporting with the laboratory; obtain a valid result before assessment.",
+      "treatment_if_measure_above_upper_bound": "Evaluate controlled chemical dechlorination or suitable activated carbon treatment. Verify total residual chlorine after treatment and avoid excessive reducing-agent addition."    
+},
+    {
+      "name": "chloride_as_cl",
+      "label": "Chloride (as Cl)",
+      "description": "Chloride (as Cl) in the wastewater sample; use the stated reporting basis.",
+      "unit": "mg/L",
+      "required": true,
+      "approved_lower_bound": 0,
+      "approved_upper_bound": 400.0,
+      "treatment_if_measure_below_lower_bound": "A negative reported value is invalid for this assessment. Review blanks, calibration, calculations and reporting with the laboratory; obtain a valid result before assessment.",
+      "treatment_if_measure_above_upper_bound": "Evaluate reverse osmosis or electrodialysis with suitable pretreatment. Conventional settling and biological treatment do not reliably remove dissolved chloride; plan concentrate disposal."
+    },
+    {
+      "name": "fluoride_as_f",
+      "label": "Fluoride (as F)",
+      "description": "Fluoride (as F) in the wastewater sample; use the stated reporting basis.",
+      "unit": "mg/L",
+      "required": true,
+      "approved_lower_bound": 0,
+      "approved_upper_bound": 2.0,
+      "treatment_if_measure_below_lower_bound": "A negative reported value is invalid for this assessment. Review blanks, calibration, calculations and reporting with the laboratory; obtain a valid result before assessment.",
+      "treatment_if_measure_above_upper_bound": "Evaluate activated alumina adsorption or reverse osmosis according to pH, competing ions and fluoride concentration. Validate performance and manage spent media or concentrate."    
+},
+    {
+      "name": "sulphide_as_s",
+      "label": "Sulphide (as S)",
+      "description": "Sulphide (as S) in the wastewater sample; use the stated reporting basis.",
+      "unit": "mg/L",
+      "required": true,
+      "approved_lower_bound": 0,
+      "approved_upper_bound": 0.5,
+      "treatment_if_measure_below_lower_bound": "A negative reported value is invalid for this assessment. Review blanks, calibration, calculations and reporting with the laboratory; obtain a valid result before assessment.",
+      "treatment_if_measure_above_upper_bound": "Evaluate controlled oxidation or iron precipitation with solid separation. Prevent acidification and hydrogen sulphide release; use a specialist-designed treatment and ventilation arrangement."
+    },
+    {
+      "name": "sulphate_as_s",
+      "label": "Sulphate (as S)",
+      "description": "Sulphate (as S) in the wastewater sample; use the stated reporting basis.",
+      "unit": "mg/L",
+      "required": true,
+      "approved_lower_bound": 0,
+      "approved_upper_bound": 250.0,
+      "treatment_if_measure_below_lower_bound": "A negative reported value is invalid for this assessment. Review blanks, calibration, calculations and reporting with the laboratory; obtain a valid result before assessment.",
+      "treatment_if_measure_above_upper_bound": "Confirm that the result is expressed as sulphur, rather than sulphate-ion mass. Evaluate reverse osmosis or specialist biological sulphate reduction with subsequent sulphide management and residue disposal."
+     
     }
   ]
 }
