@@ -188,6 +188,7 @@
       "approved_upper_bound": 2.0,
       "treatment_if_measure_below_lower_bound": "A negative reported value is invalid for this assessment. Review blanks, calibration, calculations and reporting with the laboratory; obtain a valid result before assessment.",
       "treatment_if_measure_above_upper_bound": "Evaluate chemical precipitation with solid separation, followed by selective ion exchange or adsorption if polishing is required. Check metal speciation and complexing agents, determine operating conditions through treatability tests, and manage metal-bearing sludge and spent media appropriately."
+},
   {
       "name": "silver_total",
       "label": "Silver (Ag)",
