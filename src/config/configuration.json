@@ -198,7 +198,7 @@
       "approved_lower_bound": 0,
       "approved_upper_bound": 0.035,
       "treatment_if_measure_below_lower_bound": "A negative reported value is invalid for this assessment. Review blanks, calibration, calculations and reporting with the laboratory; obtain a valid result before assessment.",
-      "treatment_if_measure_above_upper_bound": "Evaluate silver recovery, precipitation or selective ion exchange according to chemical form and complexing agents. Manage recovered silver and spent media appropriately.",
+      "treatment_if_measure_above_upper_bound": "Evaluate silver recovery, precipitation or selective ion exchange according to chemical form and complexing agents. Manage recovered silver and spent media appropriately."
       
     },
     {
@@ -222,7 +222,7 @@
       "approved_lower_bound": 0,
       "approved_upper_bound": 5.0,
       "treatment_if_measure_below_lower_bound": "A negative reported value is invalid for this assessment. Review blanks, calibration, calculations and reporting with the laboratory; obtain a valid result before assessment.",
-      "treatment_if_measure_above_upper_bound": "Evaluate alum or ferric precipitation with flocculation and solid separation. Determine dose by jar testing, check alkalinity and final pH, and manage phosphorus-bearing sludge.",
+      "treatment_if_measure_above_upper_bound": "Evaluate alum or ferric precipitation with flocculation and solid separation. Determine dose by jar testing, check alkalinity and final pH, and manage phosphorus-bearing sludge."
      
     },
     {
@@ -234,7 +234,7 @@
       "approved_lower_bound": 0,
       "approved_upper_bound": 150.0,
       "treatment_if_measure_below_lower_bound": "A negative reported value is invalid for this assessment. Review blanks, calibration, calculations and reporting with the laboratory; obtain a valid result before assessment.",
-      "treatment_if_measure_above_upper_bound": "Measure ammonia and organic nitrogen separately. Evaluate ammonification and nitrification followed by nitrogen removal where needed. Nitrification alone converts nitrogen to nitrate rather than removing total nitrogen.",
+      "treatment_if_measure_above_upper_bound": "Measure ammonia and organic nitrogen separately. Evaluate ammonification and nitrification followed by nitrogen removal where needed. Nitrification alone converts nitrogen to nitrate rather than removing total nitrogen."
       
     },
     {
@@ -246,7 +246,7 @@
       "approved_lower_bound": 0,
       "approved_upper_bound": 50.0,
       "treatment_if_measure_below_lower_bound": "A negative reported value is invalid for this assessment. Review blanks, calibration, calculations and reporting with the laboratory; obtain a valid result before assessment.",
-      "treatment_if_measure_above_upper_bound": "Evaluate zeolite ion exchange for suitable low-flow streams or biological nitrification after checking toxicity, alkalinity and aeration requirements. Measure nitrate formed during nitrification and evaluate further removal where needed.",
+      "treatment_if_measure_above_upper_bound": "Evaluate zeolite ion exchange for suitable low-flow streams or biological nitrification after checking toxicity, alkalinity and aeration requirements. Measure nitrate formed during nitrification and evaluate further removal where needed."
      
     },
     {
@@ -258,7 +258,7 @@
       "approved_lower_bound": 0,
       "approved_upper_bound": 10.0,
       "treatment_if_measure_below_lower_bound": "A negative reported value is invalid for this assessment. Review blanks, calibration, calculations and reporting with the laboratory; obtain a valid result before assessment.",
-      "treatment_if_measure_above_upper_bound": "Evaluate anoxic biological denitrification or nitrate-selective ion exchange. Check carbon availability for biological treatment and arrange management of spent regenerant where ion exchange is used.",
+      "treatment_if_measure_above_upper_bound": "Evaluate anoxic biological denitrification or nitrate-selective ion exchange. Check carbon availability for biological treatment and arrange management of spent regenerant where ion exchange is used."
      
     },
     {
